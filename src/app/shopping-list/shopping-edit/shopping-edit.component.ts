@@ -3,7 +3,6 @@ import { Ingredient } from 'src/app/shared/ingredient.model';
 import { ShoppingListService } from '../shopping-list.service';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { threadId } from 'worker_threads';
 
 @Component({
   selector: 'app-shopping-edit',
@@ -50,6 +49,11 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
   onClear() {
     this.slForm.reset();
     this.editMode = false;
+  }
+
+  onDelete() {
+    this.slService.deleteIngredient(this.editedItemIndex)
+    this.onClear();
   }
 
   ngOnDestroy() {
