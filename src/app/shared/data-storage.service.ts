@@ -14,6 +14,14 @@ export class DataStorageService {
             .subscribe(response => {
                 console.log(response);
             });
-
     }
+
+    fetchRecipes() {
+        this.http
+            .get('https://recipe-book-b0e4b.firebaseio.com/recipes.json')
+            .subscribe(recipes => {
+                console.log(recipes);
+            })
+    }
+
 }
