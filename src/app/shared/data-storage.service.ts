@@ -7,7 +7,7 @@ export class DataStorageService {
     constructor(private http: HttpClient,
                 private recipeService: RecipeService) {}
 
-    storedRecipes() {
+    storeRecipes() {
         const recipes = this.recipeService.getRecipes();
         this.http
             .put('https://recipe-book-b0e4b.firebaseio.com/recipes.json', recipes)
