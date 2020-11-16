@@ -8,26 +8,26 @@ import { Subject } from 'rxjs';
 export class RecipeService {
     recipesChanged = new Subject<Recipe[]>();
 
-    private recipes: Recipe[] = [
-        new Recipe(
-            'Cupcake 1',
-            'Test Description 1',
-            'https://www.fotolip.com/wp-content/uploads/2016/05/Cupcakes-Clipart-5.png',
-            [
-                new Ingredient('flour', 2),
-                new Ingredient('sugar', 3)
-            ]),
-            new Recipe(
-                'Cupcake 2',
-                'Test Description 2',
-                'https://www.fotolip.com/wp-content/uploads/2016/05/Cupcakes-Clipart-5.png',
-                [
-                    new Ingredient('flour', 2),
-                    new Ingredient('sugar', 3)
-                ]), 
-      ];
+    // private recipes: Recipe[] = [
+    //     new Recipe(
+    //         'Cupcake 1',
+    //         'Test Description 1',
+    //         'https://www.fotolip.com/wp-content/uploads/2016/05/Cupcakes-Clipart-5.png',
+    //         [
+    //             new Ingredient('flour', 2),
+    //             new Ingredient('sugar', 3)
+    //         ]),
+    //         new Recipe(
+    //             'Cupcake 2',
+    //             'Test Description 2',
+    //             'https://www.fotolip.com/wp-content/uploads/2016/05/Cupcakes-Clipart-5.png',
+    //             [
+    //                 new Ingredient('flour', 2),
+    //                 new Ingredient('sugar', 3)
+    //             ]), 
+    //   ];
 
-    // private recipes: Recipe[] = [];
+    private recipes: Recipe[] = [];
 
     constructor(private slService: ShoppingListService) {}
     
