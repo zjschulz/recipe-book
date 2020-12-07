@@ -32,7 +32,11 @@ import { SharedModule } from './shared/shared.module';
   providers: [
     ShoppingListService,
     RecipeService,
-    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true}
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
